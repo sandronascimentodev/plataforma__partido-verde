@@ -2,7 +2,7 @@
 
 /*----------------- ROOT VARAIBLES ------------------*/
 :root {
-    --color-primary: #7380ec;
+    --color-primary: #0AA65D;
     --color-danger: #ff7782;
     --color-success: #41f1b6;
     --color-warning: #ffbb55;
@@ -11,7 +11,7 @@
     --color-info_light: #dce1eb;
     --color-dark: #363949;
     --color-light: rgba(132, 139, 200, 0.18);
-    --color-primary-variant: #111e88;
+    --color-primary-variant: #0B8C50;
     --color-dark-variant: #677483;
     --color-background: #f6f6f9;
 
