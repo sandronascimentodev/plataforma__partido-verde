@@ -448,6 +448,10 @@ main .insights small {
     font-weight: 600;
 }
 
+#clicavel {
+    cursor: pointer;
+}
+
 /*----------------- MEDIA QUERIES ------------------*/
 @media screen and (max-width: 1200px) {
     .container {
