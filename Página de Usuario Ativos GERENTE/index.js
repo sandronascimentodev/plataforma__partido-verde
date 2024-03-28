@@ -7,8 +7,9 @@ const url = '/Página Principal GERENTE/index.html';
 
 //função para chamar a url e abrir uma nova página
 function openInNewTab(url) {
-    const win = window.open('/Página Principal GERENTE/index.html', '_blank')
-    win.focus()
+    window.location.href = "/Página Principal GERENTE/index.html";
+    const win = window.open('/Página Principal GERENTE/index.html', '_blank');
+    win.focus();
 }
 
 //clicar no usuário ativo e abrir uma nova página
