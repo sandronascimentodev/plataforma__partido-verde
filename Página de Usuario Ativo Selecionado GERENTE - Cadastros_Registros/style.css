@@ -402,11 +402,11 @@ main .insights .inputUser:user-valid~.LabelInput {
 }
 
 main .insights #sublinhado {
+  text-underline-position: under;
 
   text-decoration: underline var(--color-dark);
   text-decoration-thickness: 0.2rem;
   border-radius: 5px;
-  text-underline-position: under;
 
 }
 
@@ -422,7 +422,9 @@ main .insights #sublinhado:hover {
 
 }
 
-main .insights .floatleft:hover {
+
+
+main .insights #AumentaTexto:hover {
 
   color: var(--color-primary);
   transform: scale(1.05, 1.05);
