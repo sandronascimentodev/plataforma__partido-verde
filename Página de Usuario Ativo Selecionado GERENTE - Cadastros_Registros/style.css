@@ -266,7 +266,7 @@ main .date input[type="date"] {
 }
 
 main .insights {
-  top: -15%;
+  top: -23%;
   left: 50%;
   display: grid;
   position: absolute;
@@ -424,7 +424,7 @@ main .insights #sublinhado:hover {
 
 
 
-main .insights #AumentaTexto:hover {
+main .insights .AumentaTexto:hover {
 
   color: var(--color-primary);
   transform: scale(1.05, 1.05);
@@ -568,6 +568,7 @@ main table tbody .material-icons-sharp:hover {
     grid-template-columns: 1fr;
     gap: 0;
     width: 46%;
+    top: -40%;
   }
 
   main .recent-orders {
@@ -582,15 +583,6 @@ main table tbody .material-icons-sharp:hover {
     width: 84vw;
   }
 
-  main table thead tr th:last-child,
-  main table thead tr th:first-child {
-    display: none;
-  }
-
-  main table tbody tr td:last-child,
-  main table tbody tr td:first-child {
-    display: none;
-  }
 }
 
 /*----------------- MEDIA QUERIES ------------------*/
@@ -605,6 +597,7 @@ main table tbody .material-icons-sharp:hover {
     grid-template-columns: 1fr;
     gap: 0;
     width: 80%;
+    top: -6.7rem;
 
   }
 
