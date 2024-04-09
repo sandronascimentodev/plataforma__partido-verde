@@ -391,7 +391,7 @@ main .insights .LabelInput {
   top: 0px;
   left: 0px;
   pointer-events: none;
-  transition: 0.5s;
+  transition: all 300ms ease;
 }
 
 main .insights .inputUser:focus~.LabelInput,
@@ -417,7 +417,7 @@ main .insights #sublinhado:hover {
   text-decoration-thickness: 0.2rem;
   border-radius: 5px;
   transform: scale(1.05, 1.05);
-  transition: .2s;
+  transition: all 300ms ease;
   transition-timing-function: linear;
 
 }
@@ -428,14 +428,14 @@ main .insights #AumentaTexto:hover {
 
   color: var(--color-primary);
   transform: scale(1.05, 1.05);
-  transition: .2s;
+  transition: all 300ms ease;
   transition-timing-function: linear;
 }
 
 
 
 /*----------------- RECENT ORDERS ------------------*/
-main .recent-orders {
+main form table {
   margin-top: 2rem;
 }
 
@@ -443,29 +443,40 @@ main .recent-orders h2 {
   margin-bottom: 0.8rem;
 }
 
-main .recent-orders table {
+main form table {
   background: var(--color-white);
   width: 100%;
-  border-radius: var(--card-border-radius);
+
   padding: var(--card-padding);
   text-align: center;
-  box-shadow: var(--box-shadow);
-  transition: all 300ms ease;
-}
 
-main .recent-orders table:hover {
-  box-shadow: none;
+  transition: all 300ms ease;
 }
 
 main table tbody td {
   height: 2.8rem;
   border-bottom: 1px solid var(--color-light);
   color: var(--color-dark-variant);
-  
+
 }
 
 main table tbody tr:last-child td {
   border: none;
+}
+
+main table tbody .material-icons-sharp {
+
+  background-color: var(--color-info-dark);
+  transform: scale(0.8, 0.8);
+
+}
+
+main table tbody .material-icons-sharp:hover {
+
+  transition: 300ms ease;
+  transform: scale(0.9, 0.9);
+  background-color: var(--color-primary);
+
 }
 
 #clicavel {
