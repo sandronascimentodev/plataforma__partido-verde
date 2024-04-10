@@ -16,10 +16,11 @@ closeBtn.addEventListener('click', () => {
 })
 
 //Mostrar Modal
-function showModal() {
+function showModal(body) {
 
     var element = document.getElementById("modal");
     element.classList.add("show-modal");
+    
 
 }
 
@@ -29,6 +30,17 @@ function hideModal() {
 
     var element = document.getElementById("modal");
     element.classList.remove("show-modal");
+
+}
+
+
+//Aparecer Texto de Contato Cadastrado
+function hideModalComplete() {
+
+    var element = document.getElementById("modal");
+    var elementDois = document.getElementById("cadastro-sucesso");
+    element.classList.remove("show-modal");
+    elementDois.classList.add("mostrar-cadastro-sucesso");
 
 }
 

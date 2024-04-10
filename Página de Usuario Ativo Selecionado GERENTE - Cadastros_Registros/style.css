@@ -180,6 +180,10 @@ aside .close {
   display: none;
 }
 
+#overflow-hidden {
+  overflow: hidden;
+}
+
 /*----------------- SIDEBAR ------------------*/
 aside .sidebar {
   display: flex;
@@ -254,6 +258,27 @@ main {
   margin-top: 1rem;
 }
 
+main .cadastro-sucesso {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+  font-weight: 500;
+  opacity: 0;
+  visibility: hidden;
+
+
+}
+
+main .mostrar-cadastro-sucesso {
+
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0.25s ease-in-out, transform 0.25s, opacity 0.25s ease-in-out;
+
+}
+
 main .date {
   display: inline-block;
   background: var(--color-light);
@@ -268,7 +293,7 @@ main .date input[type="date"] {
 }
 
 main .insights {
-  top: -23%;
+  top: -32%;
   left: 50%;
   display: grid;
   position: absolute;
@@ -370,37 +395,6 @@ main .insights .progress .number {
 main .insights small {
   margin-top: 1.6rem;
   display: block;
-}
-
-main .insights .inputBox {
-  position: relative;
-  margin-top: 3rem;
-}
-
-main .insights .inputUser {
-  background: none;
-  border: none;
-  border-bottom: solid var(--color-primary) 0.12rem;
-  outline: none;
-  color: var(--color-dark);
-  font-size: 15px;
-  width: 100%;
-  letter-spacing: 2px;
-}
-
-main .insights .LabelInput {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  pointer-events: none;
-  transition: all 300ms ease;
-}
-
-main .insights .inputUser:focus~.LabelInput,
-main .insights .inputUser:user-valid~.LabelInput {
-  top: -20px;
-  font-size: 12px;
-  color: var(--color-primary);
 }
 
 main .insights #sublinhado {
@@ -519,6 +513,76 @@ main .modal>div span {
   visibility: visible;
   transform: scale(1.0);
 }
+
+main .modal-content .inputBox {
+  position: relative;
+  margin-top: 3rem;
+}
+
+main .modal-content .inputUser {
+  background: none;
+  border: none;
+  border-bottom: solid var(--color-primary) 0.12rem;
+  outline: none;
+  color: var(--color-dark);
+  font-size: 15px;
+  width: 100%;
+  letter-spacing: 2px;
+}
+
+main .modal-content .LabelInput {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  transition: all 300ms ease;
+}
+
+main .modal-content .inputUser:focus~.LabelInput,
+main .modal-content .inputUser:user-valid~.LabelInput {
+  top: -20px;
+  font-size: 12px;
+  color: var(--color-primary);
+}
+
+main .modal-content .duas-colunas {
+  display: flex;
+  justify-content: space-between;
+}
+
+main .modal-content .duas-colunas #coluna-esquerda {
+  width: 60%;
+}
+
+main .modal-content .duas-colunas #coluna-direita {
+  width: 25%;
+}
+
+main .modal-content #coluna-esquerda {
+  width: 45%;
+}
+
+main .modal-content form #button-down-side {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+main .modal-content form #button-down-side a span.material-icons-sharp {
+  margin-top: 2rem;
+  transform: scale(0.9, 0.9);
+
+}
+
+main .modal-content form #button-down-side a span.material-icons-sharp:hover {
+  transform: scale(0.83, 0.83);
+  transition: all 300ms ease;
+  transition-timing-function: linear;
+
+}
+
 
 
 
@@ -672,6 +736,33 @@ main table tbody .material-icons-sharp:hover {
     width: 84vw;
   }
 
+  main #bg {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+  }
+
+  main .modal-content {
+
+    grid-template-columns: 1fr;
+    gap: 0;
+    position: absolute;
+    height: 100%;
+    transform: scale(90%);
+
+  }
+
+
+  main .modal-content .inputBox {
+    position: relative;
+    margin-top: 2.2rem;
+  }
+
+
+
 }
 
 /*----------------- MEDIA QUERIES ------------------*/
@@ -702,6 +793,8 @@ main table tbody .material-icons-sharp:hover {
     display: none;
     animation: showMenu 400ms ease forwards;
   }
+
+
 
   @keyframes showMenu {
     to {
@@ -782,4 +875,68 @@ main table tbody .material-icons-sharp:hover {
   .right .top button span {
     font-size: 2rem;
   }
+
+
+  main #bg {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  }
+
+  main .modal-content {
+    grid-template-columns: 1fr;
+    gap: 0;
+    height: 72%;
+    top: 5rem;
+    bottom: 2rem;
+    overflow: auto;
+
+  }
+
+  main .modal .duas-colunas {
+    display: block;
+  }
+
+  main .modal-content .duas-colunas #coluna-esquerda {
+    width: 100%;
+  }
+
+  main .modal-content .duas-colunas #coluna-direita {
+    width: 50%;
+  }
+
+  main .modal-content #coluna-esquerda {
+    width: 60%;
+  }
+
+  .modal-content::-webkit-scrollbar {
+    
+    width: 12px;
+    scroll-behavior: smooth;
+    scroll-padding-right: 200rem;
+    
+    /* width of the entire scrollbar */
+  }
+
+  .modal-content::-webkit-scrollbar-track {
+    border-radius: var(--border-radius-1);
+    box-shadow: var(--box-shadow-2);
+    background: var(--color-white);
+    border-radius: 20px;
+    /* color of the tracking area */
+  }
+
+  .modal-content::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary-variant);
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid var(--color-white);
+    /* creates padding around scroll thumb */
+  }
+
 }
