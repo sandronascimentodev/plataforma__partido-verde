@@ -24,6 +24,7 @@
   --padding: 1.2rem;
 
   --box-shadow: 0 2rem 3rem var(--color-light);
+  --box-shadow-2: 0 1rem 2rem var(--color-light);
 }
 
 /*----------------- DARK THEME VARAIBLES ------------------*/
@@ -34,6 +35,7 @@
   --color-dark-variant: #a3bdcc;
   --color-light: rgba(0, 0, 0, 0.4);
   --box-shadow: 0 2rem 3rem var(--color-light);
+  --box-shadow-2: 0 1rem 2rem var(--color-light);
 }
 
 * {
@@ -431,6 +433,93 @@ main .insights .AumentaTexto:hover {
   transition: all 300ms ease;
   transition-timing-function: linear;
 }
+
+
+/*-------- MODAL -------*/
+main #red {
+
+  background-color: rgb(219, 71, 71);
+  transform: scale(0.8, 0.8);
+
+}
+
+main #red:hover {
+
+  background-color: rgb(206, 48, 48);
+  transform: scale(0.73, 0.73);
+  transition: all 300ms ease;
+  transition-timing-function: linear;
+
+}
+
+.modal {
+  position: fixed;
+  padding: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.25s ease-in-out, transform 0.25s, opacity 0.25s ease-in-out;
+
+}
+
+.modal-content {
+
+  background-color: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  width: 384px;
+  box-shadow: var(--box-shadow-2);
+  transition: all 300ms ease;
+
+
+}
+
+.modal-content:hover {
+  box-shadow: none;
+}
+
+main .modal h3 {
+  margin: 1rem 0 0.6rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .modal #sublinhado {
+  text-underline-position: under;
+
+  text-decoration: underline var(--color-dark);
+  text-decoration-thickness: 0.2rem;
+  border-radius: 5px;
+
+}
+
+main .modal>div span {
+  background: var(--color-primary);
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: var(--color-white);
+  font-size: 2rem;
+  float: right;
+  cursor: pointer;
+
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+}
+
 
 
 

@@ -3,6 +3,8 @@ const menuBtn = document.querySelector("#menu-btn");
 const closeBtn = document.querySelector("#close-btn");
 const themeToggler = document.querySelector(".theme-toggler");
 
+
+
 //show sidebar
 menuBtn.addEventListener('click', () => {
     sideMenu.style.display = 'block';
@@ -12,6 +14,25 @@ menuBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     sideMenu.style.display = 'none';
 })
+
+//Mostrar Modal
+function showModal() {
+
+    var element = document.getElementById("modal");
+    element.classList.add("show-modal");
+
+}
+
+
+//Esconder Modal
+function hideModal() {
+
+    var element = document.getElementById("modal");
+    element.classList.remove("show-modal");
+
+}
+
+
 
 //change theme
 themeToggler.addEventListener('click', () => {
