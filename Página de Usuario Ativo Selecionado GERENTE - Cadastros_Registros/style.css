@@ -420,14 +420,34 @@ main .insights #sublinhado:hover {
 
 
 
+main .insights .AumentaTexto {
+
+  color: var(--color-dark);
+  font-weight: 600;
+
+}
+
 main .insights .AumentaTexto:hover {
 
   color: var(--color-primary);
-  transform: scale(1.05, 1.05);
-  transition: all 300ms ease;
+  font-size: .91rem;
+  transition: all 200ms ease;
   transition-timing-function: linear;
 }
 
+main .insights .middle .AumentaTexto {
+
+  color: var(--color-dark);
+
+}
+
+main .insights .middle .AumentaTexto:hover {
+
+  color: var(--color-primary);
+  transform: scale(1.05, 1.05);
+  transition: all 200ms ease;
+  transition-timing-function: linear;
+}
 
 /*-------- MODAL -------*/
 main #red {
@@ -503,7 +523,7 @@ main .modal>div span {
   border-radius: 50%;
   color: var(--color-white);
   font-size: 2rem;
-  float: right;
+  float: inline-end;
   cursor: pointer;
 
 }
@@ -570,21 +590,21 @@ main .modal-content form #button-down-side {
 
 }
 
-main .modal-content form #button-down-side a span.material-icons-sharp {
-  margin-top: 2rem;
-  transform: scale(0.9, 0.9);
+main .modal-content form #button-down-side .enviar {
 
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  padding: 0.5rem;
+  border-radius: var(--border-radius-3);
+  margin-top: 2rem;
 }
 
-main .modal-content form #button-down-side a span.material-icons-sharp:hover {
-  transform: scale(0.83, 0.83);
+main .modal-content form #button-down-side .enviar:hover {
+  background-color: var(--color-primary-variant);
+  transform: scale(0.96, 0.96);
   transition: all 300ms ease;
   transition-timing-function: linear;
-
 }
-
-
-
 
 
 /*----------------- RECENT ORDERS ------------------*/
@@ -914,11 +934,11 @@ main table tbody .material-icons-sharp:hover {
   }
 
   .modal-content::-webkit-scrollbar {
-    
+
     width: 12px;
     scroll-behavior: smooth;
     scroll-padding-right: 200rem;
-    
+
     /* width of the entire scrollbar */
   }
 
