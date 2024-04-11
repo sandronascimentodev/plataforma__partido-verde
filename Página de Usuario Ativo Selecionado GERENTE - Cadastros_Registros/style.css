@@ -938,25 +938,9 @@ main table tbody .material-icons-sharp:hover {
     width: 12px;
     scroll-behavior: smooth;
     scroll-padding-right: 200rem;
+    display: none;
 
     /* width of the entire scrollbar */
-  }
-
-  .modal-content::-webkit-scrollbar-track {
-    border-radius: var(--border-radius-1);
-    box-shadow: var(--box-shadow-2);
-    background: var(--color-white);
-    border-radius: 20px;
-    /* color of the tracking area */
-  }
-
-  .modal-content::-webkit-scrollbar-thumb {
-    background-color: var(--color-primary-variant);
-    /* color of the scroll thumb */
-    border-radius: 20px;
-    /* roundness of the scroll thumb */
-    border: 3px solid var(--color-white);
-    /* creates padding around scroll thumb */
   }
 
 }
