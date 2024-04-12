@@ -603,7 +603,7 @@ main .recent-orders a {
   }
 }
 
-/*----------------- MEDIA QUERIES ------------------*/
+/*----------------- MEDIA QUERIES ------------------
 @media screen and (max-width: 768px) {
   .container {
     width: 100%;
@@ -710,4 +710,37 @@ main .recent-orders a {
   .right .top button span {
     font-size: 2rem;
   }
+}
+*/
+
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none; 
+  }
+  .mobile-menu {
+    display: block; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 11px;
+  }
+
 }
