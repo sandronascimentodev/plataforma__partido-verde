@@ -21,6 +21,9 @@ themeToggler.addEventListener('click', () => {
     themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
 })
 
+
+
+
 // fill orders in table
 /*Orders.forEach(order => {
     const tr = document.createElement('tr');

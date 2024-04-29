@@ -35,14 +35,16 @@
                             <h4>LOGIN</h4>
                         </a>
                     </div>
-                    <form>
+                    <form id="form" onsubmit="return validateForm()">
                         <div class="inputBox">
-                            <input type="text" name="name" id="name" class="inputUser">
-                            <label for="nome" class="LabelInput"> Nome de Usuário </label>
+                            <input type="text" name="email" id="email"  class="inputUser required" oninput = "emailValidate">
+                            <label for="nome" class="LabelInput"> Insira seu em@il</label>
+                            <span class="span-required" id="email-error">Insira um email Válido</span>
                         </div>
                         <div class="inputBox">
-                            <input type="password" name="senha" id="senha" class="inputUser">
+                            <input type="password" name="senha" id="senha" class="inputUser required">
                             <label for="password" class="LabelInput"> Senha</label>
+                            <span class="span-required" id="password-error">Sennha inválida</span>
                             <br><br>
                             <button type="submit"><a href="/Página Principal GERENTE/index.html">ENTRAR</a></button> 
                         </div>                      
@@ -54,8 +56,63 @@
             <!-------------------- END OF TOP ------------------------>
         </div>
 
+
         <script src="./orders.js"></script>
         <script src="./index.js"></script>
+        <script>
+            function validateEmail(email) {
+                var re = /\S+@\S+\.\S+/;
+                return re.test(email);
+            }
+    
+            function validateForm() {
+                var email = document.getElementById("email").value;
+                var senha = document.getElementById("senha").value;
+                var emailError = document.getElementById("email-error");
+                var passwordError = document.getElementById("password-error");
+    
+                // Verifica se o campo de email está vazio ou não é um email válido
+                if (email === "" || !validateEmail(email)) {
+                    emailError.style.display = "inline";
+                    return false;
+                } else {
+                    emailError.style.display = "none";
+                }
+    
+                // Verifica se o campo de senha está vazio ou possui menos de 6 caracteres
+                if (senha === "" || senha.length < 6) {
+                    passwordError.style.display = "inline";
+                    return false;
+                } else {
+                    passwordError.style.display = "none";
+                }
+    
+                return true;
+            }
+    
+            function emailValidate() {
+                var email = document.getElementById("email").value;
+                var emailError = document.getElementById("email-error");
+    
+                if (email === "" || !validateEmail(email)) {
+                    emailError.style.display = "inline";
+                } else {
+                    emailError.style.display = "none";
+                }
+            }
+    
+            function passwordValidate() {
+                var senha = document.getElementById("senha").value;
+                var passwordError = document.getElementById("password-error");
+    
+                if (senha === "" || senha.length < 6) {
+                    passwordError.style.display = "inline";
+                } else {
+                    passwordError.style.display = "none";
+                }
+            }
+        </script>
+
 
 </body>
 

@@ -484,6 +484,13 @@ main table tbody tr:last-child td {
   border: none;
 }
 
+.span-required{
+  font-size: 12px;
+  margin: 3px 0 0 1px;
+  color: var(--color=red);
+  display: none;
+}
+
 main .recent-orders a {
   text-align: center;
   display: block;
