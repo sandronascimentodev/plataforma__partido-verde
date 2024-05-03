@@ -33,6 +33,43 @@ function hideModal() {
 
 }
 
+function validarFormulario() {
+    var nomeCompleto = document.getElementById('nome-completo').value;
+    var atividadeProfissional = document.getElementById('atv-profissional').value;
+    var endereco = document.getElementById('endereco').value;
+    var complemento = document.getElementById('complemento').value;
+    var cidade = document.getElementById('cidade').value;
+    var estado = document.getElementById('estado').value;
+
+    if (nomeCompleto === "" || atividadeProfissional === "" || endereco === "" || complemento === "" || cidade === "" || estado === "" ) {
+        alert("Todos os campos devem ser preenchidos!");
+        return false;
+    }
+
+    if (!/^[a-zA-Z\s]*$/.test(nomeCompleto)) {
+        alert("O nome completo não pode conter caracteres numéricos!");
+        return false;
+    }
+
+    if (!/^[a-zA-Z\s]*$/.test(atividadeProfissional)) {
+        alert("A atividade profissional não pode conter caracteres numéricos.");
+        return false;
+    }
+
+    if (!/^[a-zA-Z\s]*$/.test(cidade)) {
+        alert("A cidade não pode conter caracteres numéricos.");
+        return false;
+    }
+
+    if (!/^[a-zA-Z\s]*$/.test(estado)) {
+        alert("O estado não pode conter caracteres numéricos.");
+        return false;
+    }
+
+    return true;
+
+}
+
 
 //Aparecer Texto de Contato Cadastrado
 function hideModalComplete() {
