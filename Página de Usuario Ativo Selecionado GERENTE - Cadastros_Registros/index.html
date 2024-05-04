@@ -86,7 +86,7 @@
                                     <td>1</td>
                                     <td class="danger">Dona Maria</td>
                                     <td>Não</td>
-                                    <td><a href=""><span class="material-icons-sharp">
+                                    <td><a href="#" onclick="showModal2()"><span class="material-icons-sharp">
                                                 library_add
                                             </span></a></td>
 
@@ -127,6 +127,64 @@
 
                 </div>
 
+            </div>
+
+            <div class="modal" id="modal-2">
+                <div id="bg">
+                    <div class="modal-content">
+
+                        <span class="material-icons-sharp" id="red" class="" onclick="hideModal()">
+                            close
+                        </span>
+                        <h3 id="sublinhado">Cadastrar Contato</h3>
+                        <form>
+                            <div class="inputBox">
+                                <input type="text" name="nome-completo" id="nome-completo" class="inputUser">
+                                <label for="nome" class="LabelInput"> Nome Completo </label>
+                            </div>
+                            <div class="inputBox" id="coluna-esquerda">
+                                <input type="text" name="atv-profissional" id="atv-profissional" class="inputUser">
+                                <label for="nome" class="LabelInput"> Atividade Profissional</label>
+                            </div>
+                            <div class="duas-colunas">
+                                <div class="inputBox" id="coluna-esquerda">
+                                    <input type="text" name="endereco" id="endereco" class="inputUser">
+                                    <label for="nome" class="LabelInput"> Endereço</label>
+                                </div>
+                                <div class="inputBox" id="coluna-direita">
+                                    <input type="number" name="numero-casa" id="numero-casa" class="inputUser">
+                                    <label for="nome" class="LabelInput"> Número</label>
+                                </div>
+                            </div>
+                            <div class="duas-colunas">
+                                <div class="inputBox" id="coluna-esquerda">
+                                    <input type="text" name="complemento" id="complemento" class="inputUser">
+                                    <label for="nome" class="LabelInput"> Complemento</label>
+                                </div>
+                                <div class="inputBox" id="coluna-direita">
+                                    <input type="text" name="bairro" id="bairro" class="inputUser">
+                                    <label for="nome" class="LabelInput"> Bairro</label>
+                                </div>
+                            </div>
+
+                            <div class="duas-colunas">
+                                <div class="inputBox" id="coluna-esquerda">
+                                    <input type="text" name="cidade" id="cidade" class="inputUser">
+                                    <label for="nome" class="LabelInput"> Cidade</label>
+                                </div>
+                                <div class="inputBox" id="coluna-direita">
+                                    <input type="text" name="estado" id="estado" class="inputUser">
+                                    <label for="nome" class="LabelInput"> Estado</label>
+                                </div>
+                            </div>
+
+                            <div id="button-down-side">
+                                <a href="#" onclick="hideModalComplete()" class="enviar"> Cadastrar </a>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
             </div>
 
             <div class="modal" id="modal">

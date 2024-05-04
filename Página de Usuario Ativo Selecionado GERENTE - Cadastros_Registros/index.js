@@ -15,7 +15,7 @@ closeBtn.addEventListener('click', () => {
     sideMenu.style.display = 'none';
 })
 
-//Mostrar Modal
+//Mostrar Modal Cadastrar Manualmente
 function showModal(body) {
 
     var element = document.getElementById("modal");
@@ -25,10 +25,26 @@ function showModal(body) {
 }
 
 
-//Esconder Modal
+//Esconder Modal Cadastrar Manualmente
 function hideModal() {
 
     var element = document.getElementById("modal");
+    element.classList.remove("show-modal");
+
+}
+
+//Mostrar Modal Relatório
+function showModal2(body) {
+
+    var element = document.getElementById("modal-2");
+    element.classList.add("show-modal");
+    
+}
+
+//Esconder Modal  Relatório
+function hideModal() {
+
+    var element = document.getElementById("modal-2");
     element.classList.remove("show-modal");
 
 }
