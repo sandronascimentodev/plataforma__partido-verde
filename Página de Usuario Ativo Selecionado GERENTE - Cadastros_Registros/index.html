@@ -95,7 +95,7 @@
                                     <td>2</td>
                                     <td class="success">Seu João</td>
                                     <td>Sim</td>
-                                    <td><a href=""><span class="material-icons-sharp">
+                                    <td><a href="#" onclick="showModal2()"><span class="material-icons-sharp">
                                                 library_add
                                             </span></a></td>
 
@@ -104,7 +104,7 @@
                                     <td>3</td>
                                     <td class="danger">Paulo Messias</td>
                                     <td>Não</td>
-                                    <td><a href=""><span class="material-icons-sharp">
+                                    <td><a href="#" onclick="showModal2()"><span class="material-icons-sharp">
                                                 library_add
                                             </span></a></td>
 
@@ -129,14 +129,16 @@
 
             </div>
 
+
+            <!-------------------- MODAL RELATÓRIO ------------------------>
             <div class="modal" id="modal-2">
                 <div id="bg">
                     <div class="modal-content">
 
-                        <span class="material-icons-sharp" id="red" class="" onclick="hideModal()">
+                        <span class="material-icons-sharp" id="red" class="" onclick="hideModal2()">
                             close
                         </span>
-                        <h3 id="sublinhado">Cadastrar Contato</h3>
+                        <h3 id="sublinhado">Cadastrar Relatório</h3>
                         <form>
                             <div class="inputBox">
                                 <input type="text" name="nome-completo" id="nome-completo" class="inputUser">
@@ -187,6 +189,7 @@
                 </div>
             </div>
 
+            <!-------------------- MODAL CADASTRAR CONTATO MANUALMENTE ------------------------>
             <div class="modal" id="modal">
                 <div id="bg">
                     <div class="modal-content">

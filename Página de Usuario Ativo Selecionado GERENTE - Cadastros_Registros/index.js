@@ -42,7 +42,7 @@ function showModal2(body) {
 }
 
 //Esconder Modal  Relatório
-function hideModal() {
+function hideModal2() {
 
     var element = document.getElementById("modal-2");
     element.classList.remove("show-modal");
