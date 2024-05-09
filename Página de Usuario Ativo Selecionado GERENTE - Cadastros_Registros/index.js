@@ -3,7 +3,35 @@ const menuBtn = document.querySelector("#menu-btn");
 const closeBtn = document.querySelector("#close-btn");
 const themeToggler = document.querySelector(".theme-toggler");
 
+const url = '';
+const contatosContainer = document.querySelector("#contatos-container");
 
+
+
+//Pegar Todos os Contatos
+async function puxarContatos() {
+
+    //Chamar resposta da variável url através da função fetch
+    const response = await fetch(url);
+
+    //print da variável response
+    console.log(response);
+
+    //ativar metodo json(recebe dados que vieram da variável response em um formato de array de objetos)
+    const data = await response.json();
+
+    //print da variável data
+    console.log(data);
+
+    data.map((contato) => {
+
+        const tbody = document.createElement("div");
+
+    })
+
+}
+
+puxarContatos();
 
 //show sidebar
 menuBtn.addEventListener('click', () => {
@@ -20,7 +48,7 @@ function showModal(body) {
 
     var element = document.getElementById("modal");
     element.classList.add("show-modal");
-    
+
 
 }
 
@@ -38,7 +66,7 @@ function showModal2(body) {
 
     var element = document.getElementById("modal-2");
     element.classList.add("show-modal");
-    
+
 }
 
 //Esconder Modal  Relatório
@@ -57,7 +85,7 @@ function validarFormulario() {
     var cidade = document.getElementById('cidade').value;
     var estado = document.getElementById('estado').value;
 
-    if (nomeCompleto === "" || atividadeProfissional === "" || endereco === "" || complemento === "" || cidade === "" || estado === "" ) {
+    if (nomeCompleto === "" || atividadeProfissional === "" || endereco === "" || complemento === "" || cidade === "" || estado === "") {
         alert("Todos os campos devem ser preenchidos!");
         return false;
     }
