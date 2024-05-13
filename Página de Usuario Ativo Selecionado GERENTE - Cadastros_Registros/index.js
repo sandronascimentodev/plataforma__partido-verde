@@ -3,7 +3,7 @@ const menuBtn = document.querySelector("#menu-btn");
 const closeBtn = document.querySelector("#close-btn");
 const themeToggler = document.querySelector(".theme-toggler");
 
-const url = '';
+const url = 'https://instance.servicenow.com/api/now/table/incident/d977b66a4f411200adf9f8e18110c7b2';
 const contatosContainer = document.querySelector("#contatos-container");
 
 
@@ -23,9 +23,13 @@ async function puxarContatos() {
     //print da variável data
     console.log(data);
 
+     
     data.map((contato) => {
 
-        const tbody = document.createElement("div");
+        const tbody = document.createElement("tbody");
+        const tr = document.createElement("tr");
+        const td = document.createElement("td");
+        const link = document.createElement("a");
 
     })
 
