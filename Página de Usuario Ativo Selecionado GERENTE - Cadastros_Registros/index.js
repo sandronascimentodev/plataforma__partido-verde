@@ -77,7 +77,9 @@ function hideModal2() {
 
 }
 
+// Sua função validarFormulario()
 function validarFormulario() {
+    // Captura os valores dos campos do formulário
     var nomeCompleto = document.getElementById('nome-completo').value;
     var atividadeProfissional = document.getElementById('atv-profissional').value;
     var endereco = document.getElementById('endereco').value;
@@ -85,45 +87,62 @@ function validarFormulario() {
     var cidade = document.getElementById('cidade').value;
     var estado = document.getElementById('estado').value;
 
+    // Verifica se os campos estão vazios
     if (nomeCompleto === "" || atividadeProfissional === "" || endereco === "" || complemento === "" || cidade === "" || estado === "") {
         alert("Todos os campos devem ser preenchidos!");
         return false;
     }
 
+    // Verifica se o nome completo contém apenas letras
     if (!/^[a-zA-Z\s]*$/.test(nomeCompleto)) {
         alert("O nome completo não pode conter caracteres numéricos!");
         return false;
     }
 
+    // Verifica se a atividade profissional contém apenas letras
     if (!/^[a-zA-Z\s]*$/.test(atividadeProfissional)) {
         alert("A atividade profissional não pode conter caracteres numéricos.");
         return false;
     }
 
+    // Verifica se a cidade contém apenas letras
     if (!/^[a-zA-Z\s]*$/.test(cidade)) {
         alert("A cidade não pode conter caracteres numéricos.");
         return false;
     }
 
+    // Verifica se o estado contém apenas letras
     if (!/^[a-zA-Z\s]*$/.test(estado)) {
         alert("O estado não pode conter caracteres numéricos.");
         return false;
     }
 
+    // Se todas as validações passarem, retorna true
     return true;
-
 }
+
+// Função para fechar o modal apenas se o formulário for válido
+function hideModalComplete() {
+    // Valida o formulário antes de fechar o modal
+    if (validarFormulario()) {
+        var element = document.getElementById("modal");
+        var elementDois = document.getElementById("cadastro-sucesso");
+        element.classList.remove("show-modal");
+        elementDois.classList.add("mostrar-cadastro-sucesso");
+    }
+}
+
 
 
 //Aparecer Texto de Contato Cadastrado
-function hideModalComplete() {
+//function hideModalComplete() {
 
-    var element = document.getElementById("modal");
-    var elementDois = document.getElementById("cadastro-sucesso");
-    element.classList.remove("show-modal");
-    elementDois.classList.add("mostrar-cadastro-sucesso");
+   // var element = document.getElementById("modal");
+   // var elementDois = document.getElementById("cadastro-sucesso");
+   // element.classList.remove("show-modal");
+    ///elementDois.classList.add("mostrar-cadastro-sucesso");
 
-}
+//}
 
 
 
