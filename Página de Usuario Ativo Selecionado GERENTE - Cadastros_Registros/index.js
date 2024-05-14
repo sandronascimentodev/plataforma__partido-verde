@@ -23,7 +23,7 @@ async function puxarContatos() {
     //print da variável data
     console.log(data);
 
-     
+
     data.map((contato) => {
 
         const tbody = document.createElement("tbody");
@@ -156,3 +156,25 @@ themeToggler.addEventListener('click', () => {
     document.querySelector('table tbody').appendChild(tr);
 
 })*/
+
+function auth() {
+    var config = {
+        'client_id': '107765724452-7ul237bdc74bcqa19t9ftob6v04p30ov.apps.googleusercontent.com',
+        'scope': 'https://www.google.com/m8/feeds'
+    };
+    gapi.auth.authorize(config, function () {
+        fetch(gapi.auth.getToken());
+
+    });
+}
+
+function fetch(token) {
+    $.ajax({
+        url: "https://www.google.com/m8/feeds/contacts/default/full?access_token=" + token.access_token + "&alt=json",
+        dataType: "jsonp",
+        success: function (data) {
+            // display all your data in console
+            console.log(JSON.stringify(data));
+        }
+    });
+}	
